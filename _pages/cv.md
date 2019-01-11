@@ -44,4 +44,4 @@ Associations
 * 
 * 
 
-[Download my resume](https://AnthonyHoudaille.github.io/images/Anthony's-Resume.pdf)
+[Download my resume] (https://AnthonyHoudaille.github.io/images/Anthony's-Resume.pdf)
