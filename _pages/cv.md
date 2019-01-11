@@ -8,40 +8,5 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* 
-* 
-* 
 
-Work experience
-======
-* 
-  * 
-  *  
-  * 
-
-* 
-  * 
-  * 
-  * 
-  
-* 
-  * 
-  * 
-  * 
-  
-* 
-  * 
-  * 
-  * 
-  
-
-
-Associations
-======
-* 
-* 
-* 
-
-[Download my resume] (https://AnthonyHoudaille.github.io/images/Anthony's-Resume.pdf)
+<span style="color:blue">[Download my resume](https://AnthonyHoudaille.github.io/images/Anthony's-Resume.pdf)</span>
