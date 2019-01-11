@@ -23,5 +23,5 @@ You will find here content related to my fields of interest :
 
 
 If you would like to get to know more about me, feel free to check out my [resume](https://AnthonyHoudaille.github.io/cv/).
-Any feedback is welcome, don't hesitate to drop me an [email](anthonyhoudaille@gmail.com)
+Any feedback is welcome, don't hesitate to drop me an email at anthonyhoudaille@gmail.com
 
