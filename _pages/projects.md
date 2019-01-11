@@ -5,9 +5,9 @@ permalink: /projects/
 author_profile: true
 ---
 
-<span style="color:red">
+
 ## GitHub Projects
-</span>
+
 ### Predicting the predominant kind of tree (Kaggle)
 
 In this [challenge](https://github.com/) , I am trying to predict the forest cover type (the predominant kind of tree cover) from strictly cartographic variables (as opposed to remotely sensed data) :
@@ -23,9 +23,9 @@ See GitHub page: <span style="color:blue">[https://github.com//Received-Signal-S
 ### Ship Detection (Deep Learning on satelite images)
 
 See GitHub page: <span style="color:blue">[https://github.com/AnthonyHoudaille/FilRougeAIRBUS](https://github.com/AnthonyHoudaille/FilRougeAIRBUS) </span>
-<span style="color:red">
+
 ## Project Articles
-</span>
+
 {% include base_path %}
 
 {% for post in site.projects reversed %}
