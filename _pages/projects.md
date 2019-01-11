@@ -20,9 +20,9 @@ Smart devices such as IoT sensors use low energy consuming networks such as the 
 
 See GitHub page: <span style="color:blue">[https://github.com//Received-Signal-Strengh-Position-Estimation](https://github.com//Received-Signal-Strengh-Position-Estimation)</span>
 
-### Ship Detection (Text, Sound, Video)
+### Ship Detection (Deep Learning on satelite images)
 
-
+See GitHub page: <span style="color:blue">[https://github.com/AnthonyHoudaille/FilRougeAIRBUS </span>
 
 ## Project Articles
 
