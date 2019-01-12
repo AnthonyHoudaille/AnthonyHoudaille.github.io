@@ -12,6 +12,9 @@ Welcome to my personal blog.
 I recently graduated from ENSEA, a French Engineering School specialized in Electronics. 
 I’m currently studying in the first French Big Data’s Post Master Degree, which is dispensed by TELECOM PARISTECH. 
 
+I am looking for a 6 months International INTERNSHIP (North America, Nordic countries, UK).
+I will be available in July 2019.
+
 My interest in Data Science is growing a little more every day and I would be very happy if I could spread my enthusiasm by scrawling my projects.
 
 You will find here content related to my fields of interest :
