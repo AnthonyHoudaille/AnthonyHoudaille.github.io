@@ -5,7 +5,7 @@ main:
     url: /ml/
     
   - title: "Github Projects"
-     url: /github/
+    url: /github/
     
   - title: "WriteUp"
     url: /projects/
