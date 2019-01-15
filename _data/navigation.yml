@@ -4,10 +4,10 @@ main:
   - title: "Machine Learning and Deep Learning"
     url: /ml/
     
-  #- title: "Python Tips"
-    # url: /tipspython/
+  - title: "GitHub Projects"
+     url: /github/
     
-  - title: "Projects"
+  - title: "WriteUp"
     url: /projects/
     
   - title: "CV"
