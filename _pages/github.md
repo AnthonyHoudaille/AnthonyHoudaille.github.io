@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Projects"
-permalink: /projects/
+title: "Github Projects"
+permalink: /github/
 author_profile: true
 ---
 
@@ -24,10 +24,4 @@ See GitHub page: <span style="color:blue">[https://github.com//Received-Signal-S
 
 See GitHub page: <span style="color:blue">[https://github.com/AnthonyHoudaille/FilRougeAIRBUS](https://github.com/AnthonyHoudaille/FilRougeAIRBUS) </span>
 
-## Project Articles
 
-{% include base_path %}
-
-{% for post in site.projects reversed %}
-  {% include archive-single.html %}
-{% endfor %}
