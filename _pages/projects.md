@@ -18,7 +18,7 @@ See GitHub page : <span style="color:blue">[https://github.com/AnthonyHoudaille/
 
 Smart devices such as IoT sensors use low energy consuming networks such as the ones provided by Sigfox or Lora. But without using GPS networks, it becomes harder to estimate the position of the sensor. The aim of this study is to provide a geolocation estimation using Received Signal Strength Indicator in the context of IoT. The aim is to allow a geolocation of lowconsumption connected devices using the Sigfox network. State of the art modelsare able to be precise to the nearest kilometer in urban areas, and around tenkilometers in less populated areas.
 
-See GitHub page: <span style="color:blue">[https://github.com//Received-Signal-Strengh-Position-Estimation](https://github.com//Received-Signal-Strengh-Position-Estimation)</span>
+See GitHub page: <span style="color:blue">[https://github.com//Received-Signal-Strength-Geo-Location](https://github.com/AnthonyHoudaille/Received-Signal-Strength-Geo-Location)</span>
 
 ### Ship Detection (Deep Learning on satelite images)
 
