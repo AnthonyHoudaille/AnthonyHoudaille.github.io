@@ -12,7 +12,7 @@ author_profile: true
 
 In this [challenge](https://github.com/) , I am trying to predict the forest cover type (the predominant kind of tree cover) from strictly cartographic variables (as opposed to remotely sensed data) :
 
-See GitHub page : <span style="color:blue">[https://github.com/](https://)</span>
+See GitHub page : <span style="color:blue">[https://github.com/AnthonyHoudaille/Kaggle-Forest-Type](https://github.com/AnthonyHoudaille/Kaggle-Forest-Type)</span>
 
 ### Estimating a position from a received signal strength for IoT sensors
 
