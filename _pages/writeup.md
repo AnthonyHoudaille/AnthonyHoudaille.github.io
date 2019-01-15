@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "WriteUp"
-permalink: /writeup/
+permalink: /project/
 author_profile: true
 ---
 
