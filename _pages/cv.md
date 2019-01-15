@@ -9,4 +9,4 @@ redirect_from:
 {% include base_path %}
 
 
-<span style="color:blue">[Download my resume](https://AnthonyHoudaille.github.io/images/Anthony's-Resume.pdf)</span>
+<embed src="https://anthonyhoudaille.github.io/images/Anthony's-Resume.pdf" type="application/pdf" width="600px" height="500px" />
