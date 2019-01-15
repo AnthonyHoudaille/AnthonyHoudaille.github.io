@@ -10,7 +10,7 @@ author_profile: true
 
 ### Predicting the predominant kind of tree (Kaggle)
 
-In this [challenge](https://github.com/) , I am trying to predict the forest cover type (the predominant kind of tree cover) from strictly cartographic variables (as opposed to remotely sensed data) :
+In this [challenge](https://github.com/AnthonyHoudaille/Kaggle-Forest-Type) , I am trying to predict the forest cover type (the predominant kind of tree cover) from strictly cartographic variables (as opposed to remotely sensed data) :
 
 See GitHub page : <span style="color:blue">[https://github.com/AnthonyHoudaille/Kaggle-Forest-Type](https://github.com/AnthonyHoudaille/Kaggle-Forest-Type)</span>
 
