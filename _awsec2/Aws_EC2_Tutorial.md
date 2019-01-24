@@ -1,7 +1,8 @@
 ---
-layout: archive
+published: true
 title: "AWS EC2 Instances Tutorial (Step 1 on 4) "
-permalink: /awsec2/
+collection: awsec2
+layout: single
 author_profile: true
 ---
 
