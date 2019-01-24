@@ -12,3 +12,6 @@ main:
     
   - title: "CV"
     url: /cv/
+
+  - title: "AWS EC2 Tutorials"
+    url: /ewsec2/
