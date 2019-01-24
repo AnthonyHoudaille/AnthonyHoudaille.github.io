@@ -1,7 +1,8 @@
 ---
-layout: archive
+published: true
 title: "Apache Cassandra Tutorial (Step 2 on 4) "
-permalink: /awsec2/
+collection: awsec2
+layout: single
 author_profile: true
 ---
 
