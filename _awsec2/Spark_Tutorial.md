@@ -1,9 +1,11 @@
 ---
-layout: archive
+published: true
 title: "Apache Spark Tutorial (Step 3 on 4) "
-permalink: /awsec2/
+collection: awsec2
+layout: single
 author_profile: true
 ---
+
 
 * Spark can be configured with multiple cluster managers like YARN, Mesos etc. Along with that it can be configured in standalone mode.
 
