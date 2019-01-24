@@ -15,7 +15,7 @@ This tutorial presents a step-by-step guide to configure a cluster AWS EC2 with 
 
 First of all, I would like to present you the Architecture I want to deployed. 
 
-[alt link]()
+![image](https://AnthonyHoudaille.github.io/images/Architecture_luster.png){:height="100%" width="100%"}
 
 On this architecture, we've got 8 instances AWS EC2 : 
 
