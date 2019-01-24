@@ -183,7 +183,7 @@ collections:
   st:
     output: true
     permalink: /:collection/:path/
-  bigdata:
+  awsec2:
     output: true
     permalink: /:collection/:path/
 
