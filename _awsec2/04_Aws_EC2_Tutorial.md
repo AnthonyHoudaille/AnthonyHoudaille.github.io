@@ -111,7 +111,7 @@ Copy the public DNS on AWS' website :
 ![image](https://AnthonyHoudaille.github.io/images/EC2_copy_DNS.png)
 
 Then, go back to your terminal and execute the commande bellow :  
-``` ssh -i "<path to your keyPair directory>/Cluster_test_Key_Pair.pem" ubuntu@<copy the public DNS>```
+``` ssh -i "<path to your keyPair directory>/Cluster_test_Key_Pair.pem" ubuntu@<copy the public DNS>```   
 Example :   
 ``` ssh -i "/Users/anthonyhoudaille/Desktop/Tuto_Cluster_EC2_AWS/Cluster_test_Key_Pair.pem" ubuntu@ec2-54-211-51-246.compute-1.amazonaws.com```
 
