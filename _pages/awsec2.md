@@ -37,7 +37,8 @@ If you want to realised this architecture, I invite you to follow (in order) the
 3. The third explain you how to install apache Spark and how to configure it
 4. The last one show you how to have a Master resilience thanks to Zookeeper
 
-Of course, you can rise the number of Master nodes and Slaves nodes. The process will be the same as I explain. 
+Of course, you can increase the number of Masters nodes and Slaves nodes.  
+In this case, you just need to addapt your configuration files.
 
 {% include base_path %}
 
