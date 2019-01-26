@@ -106,7 +106,7 @@ We will change :
 * add : ``` server.1=<PRIVATE.DNS.1>:2891:3881   
 			server.2=<PRIVATE.DNS.2>:2892:3882   
 			server.3=<PRIVATE.DNS.3>:2893:3883 ```
-* datadir= <Path to the data dir>
+* datadir= ```<Path to the data dir>
 
 
 Example :  
