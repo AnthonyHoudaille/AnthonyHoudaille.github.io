@@ -6,12 +6,12 @@ layout: single
 author_profile: true
 ---
 
-This topic contains information for deploying Apache-Cassandra on your Slaves nodes.
+This topic contains information for deploying Apache-Cassandra on your Slave nodes.
 
 
 # 1. Conexion SSH on each Slave nodes
 
-For this tutorial, we will only used Slaves nodes.  
+For this tutorial, we will only used Slave nodes.  
 Be connected on each one by SSH.  
 If you don't remenber how to do that, you can check the last section of my previous tutorial :   
 <span style="color:blue">[AWS EC2 Instances Tutorial (Step 1 on 4)](https://anthonyhoudaille.github.io//awsec2/04_Aws_EC2_Tutorial/)</span> 
@@ -22,7 +22,7 @@ If you don't remenber how to do that, you can check the last section of my previ
 Ones your instances ready and your connection done :
 
 Java 8 is needed to run Cassandra.  
-Install it with the following command on each Slaves nodes :   
+Install it with the following command on each Slave nodes :   
 ``` sudo apt install openjdk-8-jre-headless```
 
 When it's done, execute  ```vi ~/.bashrc ``` and define some exports :  
@@ -65,7 +65,7 @@ Just after, remove the .tar.gz file :
 Your terminal looks like :  
 ![image](https://AnthonyHoudaille.github.io/images/Cassandra_Extract.png)
 
-## c. Do it on each Slaves nodes 
+## c. Do it on each Slave nodes 
 
 Execute the same commands in order.
 
@@ -96,11 +96,11 @@ Save and quit.
 Example :  
 ![image](https://AnthonyHoudaille.github.io/images/Cassandra_yaml.png)
 
-Do the same thing on the 5 Slaves nodes.
+Do the same thing on the 5 Slave nodes.
 
 ## b. cassandra-rackdc.properties file : 
 
-For this tutorial, we just have to comment the tow lines uncommented.  
+For this tutorial, we just have to comment the two lines uncommented.  
 We do not have to specify any rack name or the name of the DataCenter because we just have one.  
 
 ![image](https://AnthonyHoudaille.github.io/images/Cassandra_rack.png)
@@ -123,7 +123,7 @@ To see the complete connection, execute this line :
 
 
 
-Your Slaves nodes with Apache-Cassandra are now configured.  
+Your Slave nodes with Apache-Cassandra are now configured.  
 
 The next step is to install and configure zookeeper on the dedicated node and on two of our five Workers nodes.  
 You can follow my tutorial : 
