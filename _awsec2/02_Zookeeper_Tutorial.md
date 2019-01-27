@@ -6,7 +6,7 @@ layout: single
 author_profile: true
 ---
 
-This topic contains Zookeeper (ZK) Install Information. In our architecture, we used **3 Zookeeper instances** to secure the Spark master instances. 
+This topic contains Zookeeper (ZK) Install Information. In our architecture, we used **3 Zookeeper instances** to secure the Spark Masters. 
 
 
 Zookeeper may be installed on its own on a node, or together with Spark/Cassandra on a worker node. *See architecture*. It is important that each zookeeper node is aware of other zookeeper instances so that they form a quorum of 3.
@@ -27,7 +27,7 @@ You need to copy the link to donwload Apache-Zookeeper.
 ![image](https://AnthonyHoudaille.github.io/images/Zookeeper_DL.png)
 
 
-# 3. Install Apache-Cassandra on your instances
+# 3. Install Apache-Zookeeper on your instances
 
 Make sure your on the /ubuntu/home/ directory.  
 
@@ -41,8 +41,7 @@ You will see something like this :
 
 ## b. Extract the software :
 
-You need to extract the software by executing the command bellow :  
-``` tar -xv zookeeper-3.4.13.tar.gz```
+You need to extract the software by executing the command bellow : ``` tar -xv zookeeper-3.4.13.tar.gz```
 
 Just after, remove the .tar.gz file :  
 ``` rm zookeeper-3.4.13.tar.gz```
@@ -70,13 +69,14 @@ For our tutorial, we need to :
 Make sure your on the /ubuntu/home/ directory.   
 Execute the following command : 
 ``` mv zookeeper-3.4.13/ zookeeper_1```   
-Put the digit 1 if it's your Worker node 1  
-			  2 if it's your Worker node 2   
-			  3 if it's your Worker node named 'Zookeeper'
+Put the digit :  
+- 1 if it's your Worker node 1  
+- 2 if it's your Worker node 2   
+- 3 if it's your Worker node named 'Zookeeper'
 
 ## b. Create the directory "logs" and "data" :
 
-Go on this new directory. Now, you need to create those 2 new directories :  
+Now, you need to create those 2 new directories :  
 ![image](https://AnthonyHoudaille.github.io/images/Zookeeper_data-logs.png)
 
 ## c. myid file : 
@@ -103,11 +103,8 @@ Now, we will change which is inside 'zoo.cfg' file :
 We will change : 
 * clientPort= 218X (The X is a digit between 1 and 3 --> 3 because we have 3 nodes with Zookeeper)
 	--> refer to section 5.c. to know which digit you need to put. 
-* add : ``` server.1=<PRIVATE.DNS.1>:2891:3881   
-			server.2=<PRIVATE.DNS.2>:2892:3882   
-			server.3=<PRIVATE.DNS.3>:2893:3883 ```
-* datadir= ```<Path to the data dir>
-
+* add : ``` server.1=<PRIVATE.DNS.1>:2891:3881  ;  server.2=<PRIVATE.DNS.2>:2892:3882  ;  server.3=<PRIVATE.DNS.3>:2893:3883 ```
+* datadir= ```<Path to the data dir>```
 
 Example :  
 ![image](https://AnthonyHoudaille.github.io/images/Zookeeper_zoo.png)
