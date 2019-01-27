@@ -1,6 +1,6 @@
 ---
 published: true
-title: "How to install Zookeeper"
+title: "Zookeeper Tutorial (Step 3 on 4) "
 collection: awsec2
 layout: single
 author_profile: true
