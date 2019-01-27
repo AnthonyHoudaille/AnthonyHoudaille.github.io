@@ -6,7 +6,7 @@ layout: single
 author_profile: true
 ---
 
-This topic contains Zookeeper (ZK) Install Information. In our architecture, we used **3 Zookeeper instances** to secure the Spark Masters. 
+This topic contains Zookeeper (ZK) Install Information. In our architecture, we used **3 Zookeeper instances** to secure Spark Masters. 
 
 
 Zookeeper may be installed on its own on a node, or together with Spark/Cassandra on a worker node. *See architecture*. It is important that each zookeeper node is aware of other zookeeper instances so that they form a quorum of 3.
