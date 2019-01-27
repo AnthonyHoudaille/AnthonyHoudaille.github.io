@@ -281,7 +281,7 @@ Once all slave nodes are running,  reload your master browser page. All Worker n
 
 ## d. Master Resilience : 
 
-What if I shutdonw my master 1?   
+What if I shutdown my master 1?   
 At this moment, Zookeeper will handle the selection of a new Master Spark.
 
 When I'll stop my master 1, the Master 2 will be elected new Master and all Worker nodes will be attached to the new elected master. 
