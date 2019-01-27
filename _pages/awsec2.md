@@ -19,9 +19,11 @@ First of all, I would like to present you the Architecture I want to deployed.
 
 On this architecture, we've got 8 instances AWS EC2 : 
 
-* 2 Masters nodes with apache-Spark-2.3.2
-* 5 Slaves nodes with apache-Spark-2.3.2 and apache-cassandra-3.11.2, including zookeeper installed on 2 of these nodes.
+* 2 Master nodes with apache-Spark-2.3.2
+* 5 Slave nodes with apache-Spark-2.3.2 and apache-cassandra-3.11.2, including zookeeper installed on 2 of these nodes.
 * The last one is a node created for the resilience of the Master. We Installed zookeeper in it.
+
+(Slaves are also called Workers)  
 
 In terms of resilience : 
 
@@ -33,11 +35,11 @@ In terms of resilience :
 If you want to realised this architecture, I invite you to follow (in order) the 4 tutorials bellow.
 
 1. The first one explain how to create instances on AWS EC2.
-2. The second explain you how to install apache Cassandra and how to configure it
-3. The third explain you how to install apache Spark and how to configure it
-4. The last one show you how to have a Master resilience thanks to Zookeeper
+2. The second deal with the installation of apache Cassandra and how to configure it
+3. The third explain you how to install apache Zookeeper and why.
+4. The last one will show you how to install apache Spark and how to configure it
 
-Of course, you can increase the number of Masters nodes and Slaves nodes.  
+Of course, you can increase the number of Master nodes and Slave nodes.  
 In this case, you just need to addapt your configuration files.
 
 {% include base_path %}
