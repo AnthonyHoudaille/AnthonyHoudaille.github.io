@@ -6,14 +6,6 @@ layout: single
 author_profile: true
 ---
 
-
----
-layout: archive
-title: "Apache Spark Tutorial (Step 3 on 4) "
-permalink: /awsec2/
-author_profile: true
----
-
 This topic will help you install Apache-Spark on you cluster AWS EC2.  
 I'll show you how to made a standard configuration which allow your elected Master to spread its jobs on Worker nodes.  
 
