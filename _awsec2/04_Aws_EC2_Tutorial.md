@@ -117,7 +117,7 @@ Example :
 
 
 
-"Bravo" You're connected to your instances in SSH.  
+> **Conclusion** : "Bravo" You're connected to your instances in SSH.  
 You can pass to my new tutorial : <span style="color:blue">[How to Install Apache-Cassandra on AWS EC2 Instances](https://anthonyhoudaille.github.io//awsec2/03_Cassandra_Tutorial/)</span>
 
 Thank you for reading.  
