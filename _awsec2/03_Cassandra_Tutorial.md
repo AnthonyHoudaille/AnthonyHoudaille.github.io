@@ -125,6 +125,6 @@ To see the complete connection, execute this line :
 
 Your Slave nodes with Apache-Cassandra are now configured.  
 
-The next step is to install and configure zookeeper on the dedicated node and on two of our five Workers nodes.  
+> **Conclusion** : The next step is to install and configure zookeeper on the dedicated node and on two of our five Workers nodes.  
 You can follow my tutorial : 
 <span style="color:blue">[How to install and configure Zookeeper](https://anthonyhoudaille.github.io//awsec2/02_Zookeeper_Tutorial/)</span> 
