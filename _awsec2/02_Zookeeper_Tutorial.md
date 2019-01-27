@@ -128,6 +128,6 @@ Right now, all the configuration is set for your Zookeeper Cluster.
 
 To execute Zookeeper, go on the "Bin" directory and execute this command on each nodes : ```./zkServer.sh Start ```
 
-Your quorum of 3 node with Zookeeper is now ready. The next step is to install Apache-Spark.   
+Your quorum of 3 nodes with Zookeeper is now ready. The next step is to install Apache-Spark.   
 You can follow my tutorial : 
 <span style="color:blue">[How to install and configure Apache-Spark](https://anthonyhoudaille.github.io//awsec2/01_Spark_Tutorial/)</span> 
