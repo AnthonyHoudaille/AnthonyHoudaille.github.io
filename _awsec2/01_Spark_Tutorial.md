@@ -1,6 +1,6 @@
 ---
 published: true
-title: "Apache Spark Tutorial (Step 3 on 4) "
+title: "Apache Spark Tutorial (Step 4 on 4) "
 collection: awsec2
 layout: single
 author_profile: true
