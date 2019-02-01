@@ -49,7 +49,7 @@ Dependeing on the complexity of your project and the resiliency requirements, yo
 ## c. Add Storage
 
 At the next step, you’ll be invited to add storage. Some Big Data projects imply several To. of data. For the sake of simplicity, we’ll use the standard storage of 8Gb. The storage is typically paid by Gb stored monthly.
-For exemple, in my <span style="color:blue">[GDELT progect](https://aws.amazon.com/fr/console/)</span> , we needed 650GB on each instances.   
+For exemple, in my <span style="color:blue">[GDELT progect](https://github.com/AnthonyHoudaille/Cassandra-GDELT-Queries-AWS)</span> , we needed 650GB on each instances.   
 
 ## d. Add Tags
 
