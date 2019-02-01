@@ -6,7 +6,7 @@ layout: single
 author_profile: true
 ---
 
-This tutorial will help you get jump started with AWS EC2. 
+Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. This tutorial will help you get jump started with AWS EC2. 
 
 
 # 1. Go to Amazon Web Services’ Website
@@ -37,72 +37,54 @@ For this tutorial, I'll choose "Ubuntu Server 18.04 LTS (HVM), SSD Volume Type"
 
 ## a. Select the type 
 
-Select the t2.micro.  
-Those instances are perfect to made a test cluster. 
+Select the type of instance you would like to launch. Make sure to select an instance that matches your needs. t2-micro are perfect for test phases. When deploying services in production, you might want to focus on m5d.xlarge for example. Take a look at the following link for the detailed hourly cost of each machine : https://aws.amazon.com/fr/ec2/pricing/reserved-instances/pricing/
+  
 ![image](https://AnthonyHoudaille.github.io/images/EC2_launch_t2micro.png)
 
 ## b. Configure your instance 
 
-Recall: We need 8 instances to deployed the cluster. So you need to specified it :
+Dependeing on the complexity of your project and the resiliency requirements, you might want to add several instances to your cluster. Here for example, we’ll add 8 instances.
 ![image](https://AnthonyHoudaille.github.io/images/EC2_number.png)
 
 ## c. Add Storage
 
-In function of your needs, you can increase the storage capacity.  
+At the next step, you’ll be invited to add storage. Some Big Data projects imply several To. of data. For the sake of simplicity, we’ll use the standard storage of 8Gb. The storage is typically paid by Gb stored monthly.
 For exemple, in my <span style="color:blue">[GDELT progect](https://aws.amazon.com/fr/console/)</span> , we needed 650GB on each instances.   
-
-Be carefull, you paid each GB of EBS storage.
-
-Here, take the standard storage : 8GB. 
 
 ## d. Add Tags
 
-You can add tags if you want. I just pass to the next step.
+ If needed, add tags. Else, just move on to the next step.
 
 ## e. Configure Security Group
 
-This step is realy important. The security group allow your instances to communicate with others instances under the same security group.
+The security group allows your instances to communicate with other instances within the same security group. The communication between the slaves and the master is essential to transfer data typically.
 
 For example, if you create 2 instances. Then, 2 days later if you want to add some instances to your cluster, you must put your new intances under the same security group as the old ones.
 
-The communication between Slaves and Masters is essential to transfer Data.
-
+This specific configuration allows SSH from anywhere. You might want to change this setting when working on real data.
 ![image](https://AnthonyHoudaille.github.io/images/EC2_security_group.png)
-
-For this tutorial, my "Cluster_test" is open to the world.
-You can change this configuration to protect your job. 
-
 
 ## f. Review and launch
 
-This is the last part of the configuration. Check options you put and launch your instances if it's ok for you.
-
+We’re almost done. Just review your previous step, and click “Launch”.
 
 # 5. Create a Key Pair 
 
-The key pair is an important file. It allow us to be connected with the instances in ssh.
-
-Create a key pair and save it !
+“Amazon uses public–key cryptography to encrypt and decrypt login information. Public–key cryptography uses a public key to encrypt a piece of data, such as a password, then the recipient uses the private key to decrypt the data. The public and private keys are known as a key pair”. At this step, simply create a key pair and make sure to save it !
 ![image](https://AnthonyHoudaille.github.io/images/EC2_key_pair.png)
 
-Be carreful ! The file loaded is a '.txt'.  
-You need yo change the extention. The real name must be : "Cluster_test_Key_Pair.pem".  
+If you are working on Windows or Linux, I think the extension would be something like .txt. Make sure to change it to .pem to identify your file as a key pair.
 
 # 6. Change the Name of your Intances 
 
-All your instances are now in initialisation.  
-I recommand you to change the name of your instances to be clear later. 
+All your instances are now being initialized. For clarity, change the name of your instancess accoringly to their role.
 ![image](https://AnthonyHoudaille.github.io/images/EC2_change_name.png)
 
 # 7. Connexion to our Instances in SSH
 
-First, you need to open a terminal to execute bash commands.
-
 ## a. Protect your KeyPair against accidental overwriting
 
-In command line, go into the directory where your "Cluster_test_Key_Pair.pem" is stocked.
-
-Then, execute this commande :   
+Open your terminal. Once you are in the folder that contains your key pair, copy-paste this code :   
 ``` bash chmod 400 Cluster_test_Key_Pair.pem```
 
 ## b. Try a connexion to one of your instances 
@@ -117,7 +99,7 @@ Example :
 
 
 
-> **Conclusion** : "Bravo" You're connected to your instances in SSH.  
+> **Conclusion** : Well done ! You're connected to your instances in SSH.  
 You can pass to my new tutorial : <span style="color:blue">[How to Install Apache-Cassandra on AWS EC2 Instances](https://anthonyhoudaille.github.io//awsec2/03_Cassandra_Tutorial/)</span>
 
 Thank you for reading.  
