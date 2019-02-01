@@ -6,16 +6,13 @@ layout: single
 author_profile: true
 ---
 
-This topic contains Zookeeper (ZK) Install Information. In our architecture, we used **3 Zookeeper instances** to secure Spark Masters. 
+ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. All of these kinds of services are used in some form or another by distributed applications. Zookeeper is useful if you would like to secure your architecture a little more and prevent from the consequences of the fall of your Masters for example.
 
-
-Zookeeper may be installed on its own on a node, or together with Spark/Cassandra on a worker node. *See architecture*. It is important that each zookeeper node is aware of other zookeeper instances so that they form a quorum of 3.
-
-My choise is to install zookeeper before Spark to a gain of time (in terms of configuration files).
+Zookeeper (ZK) may be installed on its own on a node, or together with Spark/Cassandra on a worker node. Each ZK node should be aware of other ZK instances in order to form a quorum of 3. We chose to install zookeeper before Spark since the configuration is lighter.
 
 # 1. Conexion SSH on the Slave nodes 1 & 2 and Zookeeper node
   
-Be connected on each one by SSH.  
+The first step is to establish a SSH connection with the nodes on which you would like to install Zookeeper.
 If you don't remenber how to do that, you can check the last section of my first tutorial :   
 <span style="color:blue">[AWS EC2 Instances Tutorial (Step 1 on 4)](https://anthonyhoudaille.github.io//awsec2/04_Aws_EC2_Tutorial/)</span> 
 
@@ -34,7 +31,9 @@ Make sure your on the /ubuntu/home/ directory.
 ## a. Download the .tar.gz file :
 
 Ones your in the good directory, execute the following command :  
-``` wget https://www-eu.apache.org/dist/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz```
+```bash
+$ wget https://www-eu.apache.org/dist/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz
+```
 
 You will see something like this :  
 ![image](https://AnthonyHoudaille.github.io/images/Zookeeper_Wget.png)
@@ -57,51 +56,58 @@ Execute the same commands in order.
 # 5. Configuration of your three nodes 
 
 For our tutorial, we need to :  
-* modify zoo-sample.cfg
-* modify spark-default.sh (this is for the next tutorial)
-* rename the directory "zookeeper-3.4.13"
-* create the directory "logs" and "data"
-* create a file 'myid' in the new "data" dir
+* modify ```zoo-sample.cfg```
+* modify ```spark-default.sh``` (this is for the next tutorial)
+* rename the directory ```zookeeper-3.4.13```
+* create the directory ```logs``` and ```data```
+* create a file ```myid``` in the new ```data``` dir
 
 
 ## a. Rename directory :
 
 Make sure your on the /ubuntu/home/ directory.   
 Execute the following command : 
-``` mv zookeeper-3.4.13/ zookeeper_1```   
-Put the digit :  
-- 1 if it's your Worker node 1  
-- 2 if it's your Worker node 2   
-- 3 if it's your Worker node named 'Zookeeper'
+```bash
+mv zookeeper-3.4.13/zookeeper_1
+```   
 
-## b. Create the directory "logs" and "data" :
+Put the digit :  
+* 1 if it's your Worker node 1  
+* 2 if it's your Worker node 2   
+* 3 if it's your Worker node named 'Zookeeper'
+
+## b. Create the directory ```logs``` and ```data``` :
 
 Now, you need to create those 2 new directories :  
 ![image](https://AnthonyHoudaille.github.io/images/Zookeeper_data-logs.png)
 
-## c. myid file : 
+## c. Create a new file ```myid``` : 
 
-Go on the new directory "data" and create a new file which contains only a digit between 1 and 3.  
- Put the digit 1 if it's your Worker node 1  
+Go on the new directory ```data``` and create a new file which contains only a digit between 1 and 3.  
+Put the digit 1 if it's your Worker node 1  
 			   2 if it's your Worker node 2   
 			   3 if it's your Worker node named 'Zookeeper'
 
 Example :  
 ![image](https://AnthonyHoudaille.github.io/images/Zookeeper_myid.png)
 
-## d. Modify zoo-sample.cfg : 
+## d. Modify ```zoo-sample.cfg``` : 
 
-First, make sure your on the "conf" directory.   
-Copy the file 'zoo-sample.cfg' as 'zoo.cfg'.   
+First, make sure your on the ```conf``` directory.   
+Copy the file ```zoo-sample.cfg``` as ```zoo.cfg```.   
 
 Use this command :    
-``` cp zoo-sample.cfg zoo.cfg```
+```bash
+cp zoo-sample.cfg zoo.cfg
+```
 
 Now, we will change which is inside 'zoo.cfg' file :  
-``` vi zoo.cfg```
+```bash 
+vi zoo.cfg
+```
 
 We will change : 
-* clientPort= 218X (The X is a digit between 1 and 3 --> 3 because we have 3 nodes with Zookeeper)
+* ```clientPort= 218X``` (The X is a digit between 1 and 3 --> 3 because we have 3 nodes with Zookeeper)
 	--> refer to section 5.c. to know which digit you need to put. 
 * add : ``` server.1=<PRIVATE.DNS.1>:2891:3881  ;  server.2=<PRIVATE.DNS.2>:2892:3882  ;  server.3=<PRIVATE.DNS.3>:2893:3883 ```
 * datadir= ```<Path to the data dir>```
@@ -116,17 +122,17 @@ Save and quit.
 Go on the home directory (zookeeper_X) and execute this :  
 ```  java -cp zookeeper-3.4.13.jar:lib/log4j-1.2.17.jar:lib/slf4j-log4j12-1.7.25.jar:lib/slf4j-api-1.7.25.jar:conf org.apache.zookeeper.server.quorum.QuorumPeerMain conf/zoo.cfg >> logs/zookeeper.log &```
 
-Do the same thing on the three nodes.  
-Do not forget, you need "OpenJDK-8" on each nodes.
+Repeat those steps on the three nodes. Do not forget that you need “OpenJDK-8” on each nodes.
 
 We discussed how to set up an ensemble with 3 nodes. Now you can create an ensemble with as many nodes as you want by making a few changes.
 
 
 # 6. Lunch Zookeeper on each nodes 
 
-Right now, all the configuration is set for your Zookeeper Cluster. 
+Right now, your configuration is not ready on your Zookeeper Cluster. Indeed, we need to install Spark and to configure it with those Zookeeper nodes. 
 
-To execute Zookeeper, go on the "Bin" directory and execute this command on each nodes : ```./zkServer.sh Start ```
+Even if you do not have install spark yet, you can launch zookeeper.
+Go on the ```Bin``` directory and execute this command on each nodes : ```./zkServer.sh Start ```
 
 > **Conclusion** : Your quorum of 3 nodes with Zookeeper is now ready. The next step is to install Apache-Spark.   
 You can follow my tutorial : 
