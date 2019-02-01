@@ -22,7 +22,7 @@ You will find here content related to my fields of interest :
 - machine learning
 - deep learning
 - big data
-- Robotic engineering
+- robotic engineering
 
 
 If you would like to get to know more about me, feel free to check out my [resume](https://AnthonyHoudaille.github.io/cv/).
